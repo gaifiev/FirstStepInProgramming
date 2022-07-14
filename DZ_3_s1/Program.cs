@@ -9,7 +9,7 @@ if (inputLine != null)
     }
     else
     {
-        Console.WriteLine($"Не чётное число");
+        Console.WriteLine($"Нечётное число");
     }
 }
 Console.ReadLine();
