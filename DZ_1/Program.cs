@@ -2,20 +2,23 @@
 string? inputNumber1 = Console.ReadLine();
 string? inputNumber2 = Console.ReadLine();
 string? inputNumber3 = Console.ReadLine();
-int num1 = int.Parse(inputNumber1);
-int num2 = int.Parse(inputNumber2);
-int num3 = int.Parse(inputNumber3);
-if (num1 > num2 && num1 > num3)
+if (inputNumber1 != null && inputNumber2 != null && inputNumber3 != null)
 {
-    Console.WriteLine($"Максимальное число = {num1}");
-}
-else
-if (num2 > num3)
-{
-    Console.WriteLine($"Максимальное число =  {num2}");
-}
-else
-{
-    Console.WriteLine($"Максимальное число =  {num3}");
+    int num1 = int.Parse(inputNumber1);
+    int num2 = int.Parse(inputNumber2);
+    int num3 = int.Parse(inputNumber3);
+    if (num1 > num2 && num1 > num3)
+    {
+        Console.WriteLine($"Максимальное число = {num1}");
+    }
+    else
+    if (num2 > num3)
+    {
+        Console.WriteLine($"Максимальное число =  {num2}");
+    }
+    else
+    {
+        Console.WriteLine($"Максимальное число =  {num3}");
+    }
 }
 Console.WriteLine();
