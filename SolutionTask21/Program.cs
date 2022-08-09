@@ -41,4 +41,4 @@ void calculateLengthABZ()
 readDataOfPoint();
 calculateLengthABZ();
 
-Console.WriteLine(lengthABZ);
+Console.WriteLine(lengthABZ); //выводит результат
