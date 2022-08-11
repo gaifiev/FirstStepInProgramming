@@ -9,26 +9,26 @@ int negativSum = 0;
 //Метод возвращает массив заполненый случайными числами от -9 до 9
 int[] FillingArray()
 {
-    int[] outArray = new int[12];
-    int i = 0;
-    System.Random numberSintezator = new System.Random();
-    while (i < 12)
+    int[] outArray = new int[12]; //new выделить оперативную память под массив и указать размер массива (выходной массив)
+    int i = 0; //буфферная переменная итератор
+    System.Random numberSintezator = new System.Random(); //создать экземпляр класса рандомайзер
+    while (i < 12) //цикл заполнения массива
     {
-        outArray[i] = numberSintezator.Next(-9, 10);
-        i++;
+        outArray[i] = numberSintezator.Next(-9, 10); // создаем новое значение и обращаемся к элементу массива [i] и заполняем массив элементами
+        i++; //увеличиваем инкремент
     }
-    return outArray;
+    return outArray; //возвращает массив (значение)
 }
 
 //Метод подсчета положительных и отрицательных значений
-void ColculateTask(int[] outArray)
+void ColculateTask(int[] outArray) // и воид ... (должен принять массив)
 {
-    int i = 0;
+    int i = 0; //буфферная переменная итератор
     while (i < 12)
     {
         if (outArray[i] > 0)
         {
-            posetivSum += outArray[i];
+            posetivSum += outArray[i]; //увеличиваем счетчик
         }
         else
         {
@@ -38,7 +38,7 @@ void ColculateTask(int[] outArray)
     }
 }
 
-//Выводим результат на кансоль
+//Выводим результат на консоль
 void PrintResult()
 {
     Console.WriteLine(posetivSum);
@@ -63,9 +63,9 @@ void PrintIntArray(int[] inputArray)
 }
 
 //Метод решения задачи 31 наивный
-void VariantNaive()
+void VariantNaive() //обернуть в метод 
 {
-    int[] bufferArray = FillingArray();
+    int[] bufferArray = FillingArray(); // к массиву присвоим в методы вернем
     PrintIntArray(bufferArray);
     ColculateTask(bufferArray);
     PrintResult();
