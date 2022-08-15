@@ -34,12 +34,12 @@ void PrintIntArray(int[] inputArray)
 object[] CopyArrayStandartTool(params object[] inputArray)
 {
     object[] buferArray = new object[inputArray.Length];
-    inputArray.CopyTo(buferArray, 0);
+    inputArray.CopyTo(buferArray, 0); //
     return buferArray;
 }
 
 int[] testArray = FillingArray();
 PrintIntArray(testArray);
 
-//int[] outArray = (int[])CopyArrayStandartTool(testArray);
-//PrintIntArray(outArray);
+// int[] outArray = (int[])CopyArrayStandartTool(testArray);
+// PrintIntArray(outArray);
