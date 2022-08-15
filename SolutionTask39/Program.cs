@@ -5,7 +5,7 @@
 // Комментарий: эту задачу можно решить 2 способами: 1). менять числа местами в исходном массиве; 2). создать новый массив и в него записать перевёрнутый исходный массив по элементам.
 
 //Метод возвращает массив заполненый случайными числами 
-int[] FillingArray(int arrayLength)
+int[] FillingArray(int arrayLength) //массив заполнения
 {
     int[] outArray = new int[arrayLength];
     int i = 0;
@@ -62,11 +62,8 @@ int[] ReverseSwapArray(int[] array)
     return array;
 }
 
-
 int[] testArray = FillingArray(17);
-
 int[] reversedArray = ReverseNewArray(testArray);
-
 PrintIntArray(testArray);
 PrintIntArray(reversedArray);
 PrintIntArray(ReverseSwapArray(testArray));
