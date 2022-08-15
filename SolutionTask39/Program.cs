@@ -47,17 +47,17 @@ int[] ReverseNewArray(int[] array)
     return newArray;
 }
 
-int[] ReverseSwapArray(int[] array)
+int[] ReverseSwapArray(int[] array) //получает массив
 {
-    int length = array.Length;
-    int buf;
+    int length = array.Length; //берет длину массива
+    int buf; //создает буфферную переменную
 
-    for (int i = 0; i < length / 2; i++)
+    for (int i = 0; i < length / 2; i++) //проходим по элементу массива
     {
         //i=1
-        buf = array[i];
-        array[i] = array[length - 1 - i];
-        array[length - 1 - i] = buf;
+        buf = array[i]; //нулевой элемент входного массива кладет в буффер
+        array[i] = array[length - 1 - i]; //к нулевому элементу массива присваивает последний элемент массива
+        array[length - 1 - i] = buf; //к последнему элементу кладет тот элмемент который находился в буффере, т.е. 1
     }
     return array;
 }
