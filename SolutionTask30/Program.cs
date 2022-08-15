@@ -8,7 +8,7 @@ void VariantNaive()
 {
     int i = 0;
     Console.Write("[");
-    while (i < 8 - 1)
+    while (i < 8)
     {
         Console.Write(numberSintezator.Next(0, 2) + ",");
         i++;
