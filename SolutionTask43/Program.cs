@@ -25,12 +25,12 @@ void Read() // метод ввода значений
 
 void Conculate()//метод вычисления
 {
-    if ((k1 == k2) && (b1 == b2))
+    if ((k1 == k2) && (b1 == b2)) //проверяет совпадают ли прямые
 
         Console.WriteLine("Прямые совпадают");
     else
-        if (k1 == k2)
-        Console.WriteLine("Прямые параллельны");
+        if (k1 == k2) //проверяет совпадают ли прямые 
+        Console.WriteLine("Прямые не совпадают");
     else
     {
         coordsX = (k2 - b1) / (k1 - k2);
