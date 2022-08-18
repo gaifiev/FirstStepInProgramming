@@ -27,7 +27,7 @@ int[,] InputArray()
 
     return outArray;
 }
-//метод заполнения массива случайными вещественными числами
+//метод заполнения массива случайными числами
 void FillTwoDimArray(int[,] outArray)
 {
     {
