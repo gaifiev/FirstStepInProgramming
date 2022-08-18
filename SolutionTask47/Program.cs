@@ -52,7 +52,7 @@ void PrintColorTwoDimArray(double[,] outArray)
             Console.Write(outArray[i, j] + " ");
             Thread.Sleep(10);
             Console.ResetColor();
-            Console.Write($" ]");
+            Console.Write($"]");
             j++;
         }
         //Console.Write("\n");
