@@ -8,17 +8,15 @@
 
 //Базовое решение
 Console.Clear();
-
-//ПОЩАДИТЕ, я переделываю КОД
-
-// метод считывания в консоле
-int[,] InputArray()
+// считываем в консоле
+Console.Write("Введите m: ");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите n: ");
+int n = Convert.ToInt32(Console.ReadLine());
+int[,] outArray = new int[9, 9];
+// проверка
+void InputArray()
 {
-    Console.Write("Введите m: ");
-    int m = Convert.ToInt32(Console.ReadLine());
-    Console.Write("Введите n: ");
-    int n = Convert.ToInt32(Console.ReadLine());
-    int[,] outArray = new int[9, 9];
     if (n > outArray.GetLength(0) || m > outArray.GetLength(1))
     {
         Console.WriteLine("Элемент не найден");
@@ -27,7 +25,6 @@ int[,] InputArray()
     {
         Console.WriteLine($"Найден элемент: {outArray[n, m]}"); //интерполяция
     }
-    return outArray;
 }
 //метод заполнения массива случайными числами
 void FillTwoDimArray(int[,] outArray)
@@ -69,8 +66,7 @@ void PrintColorTwoDimArray(int[,] outArray)
         i++;
     }
 }
-
-int[,] outArray = InputArray();
 FillTwoDimArray(outArray);
 PrintColorTwoDimArray(outArray);
+InputArray();
 
