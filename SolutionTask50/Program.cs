@@ -14,18 +14,6 @@ int m = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите n: ");
 int n = Convert.ToInt32(Console.ReadLine());
 int[,] outArray = new int[9, 9];
-// проверка
-void InputArray()
-{
-    if (n > outArray.GetLength(0) || m > outArray.GetLength(1))
-    {
-        Console.WriteLine("Элемент не найден");
-    }
-    else
-    {
-        Console.WriteLine($"Найден элемент: {outArray[n, m]}"); //интерполяция
-    }
-}
 //метод заполнения массива случайными числами
 void FillTwoDimArray(int[,] outArray)
 {
@@ -64,6 +52,18 @@ void PrintColorTwoDimArray(int[,] outArray)
         }
         Console.WriteLine();
         i++;
+    }
+}
+// проверка
+void InputArray()
+{
+    if (n > outArray.GetLength(0) || m > outArray.GetLength(1))
+    {
+        Console.WriteLine("Элемент не найден");
+    }
+    else
+    {
+        Console.WriteLine($"Найден элемент: {outArray[n, m]}"); //интерполяция
     }
 }
 FillTwoDimArray(outArray);
