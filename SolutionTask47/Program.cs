@@ -47,9 +47,12 @@ void PrintColorTwoDimArray(double[,] outArray)
         j = 0;
         while (j < outArray.GetLength(1))
         {
+            Console.Write($"[ ");
             Console.ForegroundColor = col[new System.Random().Next(0, 16)];
             Console.Write(outArray[i, j] + " ");
+            Thread.Sleep(100);
             Console.ResetColor();
+            Console.Write($" ]");
             j++;
         }
         //Console.Write("\n");
