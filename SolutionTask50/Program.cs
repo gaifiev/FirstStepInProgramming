@@ -8,6 +8,9 @@
 
 //Базовое решение
 Console.Clear();
+
+//ПОЩАДИТЕ, я переделываю КОД
+
 // метод считывания в консоле
 int[,] InputArray()
 {
@@ -24,7 +27,6 @@ int[,] InputArray()
     {
         Console.WriteLine($"Найден элемент: {outArray[n, m]}"); //интерполяция
     }
-
     return outArray;
 }
 //метод заполнения массива случайными числами
@@ -40,7 +42,6 @@ void FillTwoDimArray(int[,] outArray)
         }
     }
 }
-
 ConsoleColor[] col = new ConsoleColor[]{ConsoleColor.Black,ConsoleColor.Blue,ConsoleColor.Cyan,
                                         ConsoleColor.DarkBlue,ConsoleColor.DarkCyan,ConsoleColor.DarkGray,
                                         ConsoleColor.DarkGreen,ConsoleColor.DarkMagenta,ConsoleColor.DarkRed,
@@ -72,3 +73,4 @@ void PrintColorTwoDimArray(int[,] outArray)
 int[,] outArray = InputArray();
 FillTwoDimArray(outArray);
 PrintColorTwoDimArray(outArray);
+
