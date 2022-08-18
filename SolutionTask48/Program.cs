@@ -90,8 +90,6 @@ void UpdateTwoDimArray(ref int[,] inputArray)
 
 }
 
-
-
 int[,] twoDimArray = FillTwoDimArray(5, 8);
 PrintColorTwoDimArray(twoDimArray);
 UpdateTwoDimArray(ref twoDimArray);
