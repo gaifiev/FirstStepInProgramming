@@ -34,7 +34,7 @@ void FillTwoDimArray(int[,] outArray)
         {
             for (int j = 0; j < outArray.GetLength(1); j++)
             {
-                outArray[i, j] = new Random().Next(0, 101) / 10;
+                outArray[i, j] = new Random().Next(0, 100) / 10;
             }
         }
     }
