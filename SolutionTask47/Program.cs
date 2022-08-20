@@ -6,6 +6,7 @@
 // 8 7,8 -7,1 9
 // * При выводе матрицы показывать каждую цифру разного цвета(цветов всего 16)
 //Базовое решение
+using System;
 Console.Clear();
 // метод считывания в консоле
 double[,] InputArray()
@@ -40,6 +41,7 @@ ConsoleColor[] col = new ConsoleColor[]{ConsoleColor.Black,ConsoleColor.Blue,Con
 //метод для печати двумерного массива
 void PrintColorTwoDimArray(double[,] outArray)
 {
+    // int a = 0;
     int i = 0;
     int j = 0;
     while (i < outArray.GetLength(0))
@@ -49,18 +51,17 @@ void PrintColorTwoDimArray(double[,] outArray)
         {
             Console.Write($"[ ");
             Console.ForegroundColor = col[new System.Random().Next(0, 16)];
-            Console.Write(outArray[i, j] + " ");
+            Console.Write(outArray[i, j] + "\t");
             Thread.Sleep(10);
             Console.ResetColor();
             Console.Write($"]");
             j++;
         }
-        //Console.Write("\n");
         Console.WriteLine();
         i++;
     }
 }
-
 double[,] outArray = InputArray();
 FillTwoDimArray(outArray);
 PrintColorTwoDimArray(outArray);
+
